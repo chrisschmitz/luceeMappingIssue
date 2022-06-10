@@ -4,7 +4,7 @@ component {
 	public void function onRequest( required string targetPage ){
 		// if you swap the next two lines, the mapping won't work in Lucee 5
 		this.mappings[ 'module' ] = getDirectoryFromPath( getCurrentTemplatePath() ) & 'moduleDir';
-		var whatever = expandPath( '/anotherDirectory' );
+		var whatever = expandPath( '/anotherDirectory' ); // path has to start with a '/'
 
 		writeDump( var=this.mappings, label=getCurrentTemplatePath() );
 
